@@ -1,5 +1,3 @@
-package solid;
-
 public class PaypalPayment implements PaymentGateway{
     @Override
     public void pay(double amount) {

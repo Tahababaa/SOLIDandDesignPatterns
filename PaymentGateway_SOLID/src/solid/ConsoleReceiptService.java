@@ -1,5 +1,3 @@
-package solid;
-
 public class ConsoleReceiptService implements ReceiptService{
 
 

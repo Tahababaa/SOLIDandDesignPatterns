@@ -1,5 +1,3 @@
-package solid;
-
 public class PaymentProcessor {
 
     private PaymentLogger paymentLogger;

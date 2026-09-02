@@ -1,18 +1,18 @@
-package solid;
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Client {
     public static void main(String[] args) {
-//        solid.PaymentGateway p1 = new solid.UpiPayment();
+//        PaymentGateway p1 = new UpiPayment();
 //        p1.pay(200);
 //        p1.refund(29);
 //
-//        solid.PaymentGateway cc = new solid.CreditCardPayment();
+//        PaymentGateway cc = new CreditCardPayment();
 //        cc.pay(20.4);
 //        cc.refund(10.7);
 //
-//        solid.PaymentProcessor pp1 = new solid.PaymentProcessor();
-//        pp1.processPayment(new solid.UpiPayment(),2000);
-//        pp1.processPayment(new solid.PaypalPayment(),1876);
+//        PaymentProcessor pp1 = new PaymentProcessor();
+//        pp1.processPayment(new UpiPayment(),2000);
+//        pp1.processPayment(new PaypalPayment(),1876);
 
         PaymentLogger logger = new ConsolePaymentLogger();
         ReceiptService receiptService = new ConsoleReceiptService();
@@ -23,11 +23,11 @@ public class Client {
         processor.processPayment(2221);
 
 
-//        solid.PaymentGateway payment = new solid.FakePayment(); // LSP violation
+//        PaymentGateway payment = new FakePayment(); // LSP violation
 //        payment.refund(100);  // THROWS EXCEPTION
 
-//        solid.PaymentLogger logger2 = new solid.ConsolePaymentLogger();
-//        solid.ReceiptService receiptService2 = new solid.ConsoleReceiptService();
+//        PaymentLogger logger2 = new ConsolePaymentLogger();
+//        ReceiptService receiptService2 = new ConsoleReceiptService();
         PaymentGateway gateway2 = new UpiPayment();
 
         PaymentProcessor processor2 = new PaymentProcessor(gateway2,logger, receiptService);
