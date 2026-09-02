@@ -1,3 +1,5 @@
+package solid;
+
 public class ConsolePaymentLogger implements PaymentLogger{
     @Override
     public void logPayment(double amount) {

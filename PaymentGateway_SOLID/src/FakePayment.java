@@ -1,3 +1,5 @@
+package solid;
+
 public class FakePayment implements PaymentGateway{
 
     @Override

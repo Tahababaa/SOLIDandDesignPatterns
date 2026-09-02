@@ -1,3 +1,5 @@
+package solid;
+
 public class UpiPayment implements PaymentGateway{
 
     @Override

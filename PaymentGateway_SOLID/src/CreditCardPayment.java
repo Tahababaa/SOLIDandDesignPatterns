@@ -1,3 +1,5 @@
+package solid;
+
 public class CreditCardPayment implements PaymentGateway{
     @Override
     public void pay(double amount) {
