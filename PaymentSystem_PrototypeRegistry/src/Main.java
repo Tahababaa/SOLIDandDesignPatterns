@@ -13,9 +13,6 @@ public class Main {
 
         // ============================================================
         // 2. Create the Prototype objects
-        //
-        // These are the objects that contain our pre-configured
-        // gateway configuration.
         // ============================================================
 
         PaymentGateway stripePrototype =
