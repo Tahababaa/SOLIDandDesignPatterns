@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/PaymentSystem_PrototypeRegistry/PaymentSystem_PrototypeRegistry.iml" filepath="$PROJECT_DIR$/PaymentSystem_PrototypeRegistry/PaymentSystem_PrototypeRegistry.iml" />
       <module fileurl="file://$PROJECT_DIR$/PrototypeAndRegistryDesign/PrototypeAndRegistryDesign.iml" filepath="$PROJECT_DIR$/PrototypeAndRegistryDesign/PrototypeAndRegistryDesign.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SOLID Design.iml" filepath="$PROJECT_DIR$/.idea/SOLID Design.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleFactory_notifications/SimpleFactory_notifications.iml" filepath="$PROJECT_DIR$/SimpleFactory_notifications/SimpleFactory_notifications.iml" />
     </modules>
   </component>
 </project>

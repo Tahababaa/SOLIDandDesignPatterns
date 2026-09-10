@@ -1,17 +1,17 @@
 public class NotificationFactory {
 
-    public static Notification createNotification(String type){
-        if(type.equalsIgnoreCase("EMAIL")){
+    public static Notification createNotification(NotificationType type){
+        if(type==NotificationType.EMAIL){
             return new EmailNotification();
         }
-        else if(type.equalsIgnoreCase("SMS")){
+        else if(type==NotificationType.SMS){
             return new SMSNotification();
 
         }
-        else if(type.equalsIgnoreCase("PUSH")){
+        else if(type==NotificationType.PUSH){
             return new PushNotification();
         }
-        else if(type.equalsIgnoreCase("Whatsapp")){
+        else if(type==NotificationType.WHATSAPP){
             return new WhatsappNotification();
         }
 
