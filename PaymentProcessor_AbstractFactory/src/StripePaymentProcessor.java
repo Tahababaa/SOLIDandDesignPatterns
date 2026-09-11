@@ -3,8 +3,8 @@ public class StripePaymentProcessor implements PaymentProcessor{
 
     @Override
     public PaymentResult pay(PaymentRequest request) {
-        System.out.println("Processing payment using Stripe");
+        System.out.println("Calling Stripe. . . .");
 
-        return new PaymentResult(true,"stripe-payment-id","Payment successful");
+        throw new ProviderUnavailableException("Stripe is unavailable!");
     }
 }
