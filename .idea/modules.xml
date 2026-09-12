@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ApplicationLogger_Singleton/ApplicationLogger_Singleton.iml" filepath="$PROJECT_DIR$/ApplicationLogger_Singleton/ApplicationLogger_Singleton.iml" />
       <module fileurl="file://$PROJECT_DIR$/BuilderPatternImplementation/BuilderPatternImplementation.iml" filepath="$PROJECT_DIR$/BuilderPatternImplementation/BuilderPatternImplementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Notification_AbstractFactory/Notification_AbstractFactory.iml" filepath="$PROJECT_DIR$/Notification_AbstractFactory/Notification_AbstractFactory.iml" />
       <module fileurl="file://$PROJECT_DIR$/PaymentGateway_SOLID/PaymentGateway_SOLID.iml" filepath="$PROJECT_DIR$/PaymentGateway_SOLID/PaymentGateway_SOLID.iml" />
       <module fileurl="file://$PROJECT_DIR$/PaymentProcessor_AbstractFactory/PaymentProcessor_AbstractFactory.iml" filepath="$PROJECT_DIR$/PaymentProcessor_AbstractFactory/PaymentProcessor_AbstractFactory.iml" />
       <module fileurl="file://$PROJECT_DIR$/PaymentSystem_PrototypeRegistry/PaymentSystem_PrototypeRegistry.iml" filepath="$PROJECT_DIR$/PaymentSystem_PrototypeRegistry/PaymentSystem_PrototypeRegistry.iml" />
