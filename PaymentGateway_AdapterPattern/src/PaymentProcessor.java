@@ -1,0 +1,5 @@
+public interface PaymentProcessor {
+
+    void processPayment(double amount,String paymentInfo);
+    String getProviderName();
+}
