@@ -4,7 +4,7 @@ public class InstagramApi {
     public List<InstagramPost> fetchPosts(long accountId){
         return List.of(
                 new InstagramPost(
-                        101,
+                        "101",
                         "hELLO from Instagram",
                         accountId,
                         123456789L
