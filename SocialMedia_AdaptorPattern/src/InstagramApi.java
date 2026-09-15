@@ -1,5 +1,7 @@
+import java.util.List;
+
 public class InstagramApi {
-    public Lis<InstagramPost> fetchPosts(long accountId){
+    public List<InstagramPost> fetchPosts(long accountId){
         return List.of(
                 new InstagramPost(
                         101,
