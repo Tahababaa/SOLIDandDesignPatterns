@@ -1,17 +1,60 @@
 package client;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import facade.DataAnalysisFacade;
+import model.AnalysisResult;
+import model.DataCollectionParams;
+import model.ProcessingOptions;
+import service.DataAnalysisService;
+import service.DataAnalysisServiceImpl;
+import subsystem.AnalysisService;
+import subsystem.DataCollectionService;
+import subsystem.PreprocessingService;
+import subsystem.VisualizationService;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Create subsystem services
+        DataCollectionService dataCollectionService =
+                new DataCollectionService();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        PreprocessingService preprocessingService =
+                new PreprocessingService();
+
+        AnalysisService analysisService =
+                new AnalysisService();
+
+        VisualizationService visualizationService =
+                new VisualizationService();
+//Creating FAcade
+        DataAnalysisFacade facade =
+                new DataAnalysisFacade(
+                        dataCollectionService,
+                        preprocessingService,
+                        analysisService,
+                        visualizationService
+                );
+
+//Creating Application Service
+        DataAnalysisService dataAnalysisService = new DataAnalysisServiceImpl(facade);
+
+// Collection Parameters
+        DataCollectionParams params = new DataCollectionParams("Database",10);
+
+// Processing options
+        ProcessingOptions options =
+                new ProcessingOptions(
+                        true,
+                        true,
+                        true
+                );
+
+        // Client talks ONLY to DataAnalysisService
+        AnalysisResult result =
+                dataAnalysisService.analyze(
+                        params,
+                        options
+                );
+        System.out.println(result);
+
     }
 }
