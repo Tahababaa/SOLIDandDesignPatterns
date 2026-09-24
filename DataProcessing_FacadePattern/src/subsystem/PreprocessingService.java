@@ -5,9 +5,10 @@ import model.PreprocessedData;
 import model.ProcessingOptions;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
-public class PrecprocessingService {
+public class PreprocessingService {
     public PreprocessedData preprocess(List<DataRecord> rawData, ProcessingOptions options){
         System.out.println("Preprocessing Data...");
 
@@ -18,7 +19,13 @@ public class PrecprocessingService {
             );
         }
         if(options.isSortBySalesDescending()){
-            
+            processedData.sort(
+                    Comparator.comparing(
+                            DataRecord::getSales
+                    ).reversed()
+            );
         }
+        return new PreprocessedData(processedData);
+
     }
 }
