@@ -2,11 +2,19 @@ package com.taha.decorator;
 
 public class Main {
     public static void main(String[] args) {
-        NotificationService service = new BasicNotificationService();
-        service.send("Boss","It is done sir!");
+//        NotificationService service = new BasicNotificationService();
+//        service.send("Boss","It is done sir!");
+//
+//        service = new PriorityNotificationDecorator(service);
+//        service.send("Boss","It is done sir!");
+//
+//        service=new LoggingNotificationService(service);
+//        service.send("Logger","Testing Logs boss!");
 
-        service = new PriorityNotificationDecorator(service);
-        service.send("Boss","It is done sir!");
 
+        NotificationService service1 = new BasicNotificationService();
+        service1=new PriorityNotificationDecorator(new LoggingNotificationService(service1));
+
+        service1.send("Boss","The Police is here!");
     }
 }
