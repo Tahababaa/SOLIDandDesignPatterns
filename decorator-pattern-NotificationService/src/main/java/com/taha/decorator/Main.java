@@ -16,5 +16,14 @@ public class Main {
         service1=new PriorityNotificationDecorator(new LoggingNotificationService(service1));
 
         service1.send("Boss","The Police is here!");
+
+        service1 = new MetricsNotificationDecorator(service1);
+        service1.send("Godfather","We are in trouble!");
+
+
+        NotificationService order = new BasicNotificationService();
+        order = new MetricsNotificationDecorator(new PriorityNotificationDecorator(order));
+
+        order.send("CustomerABC","Delivery partner is waiting outside your Gate!");
     }
 }

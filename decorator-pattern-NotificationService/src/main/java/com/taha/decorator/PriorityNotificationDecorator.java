@@ -1,11 +1,10 @@
 package com.taha.decorator;
 
-public class PriorityNotificationDecorator implements NotificationService{
+public class PriorityNotificationDecorator extends NotificationDecorator{
 
-    private final NotificationService notificationService;
 
     public PriorityNotificationDecorator(NotificationService notificationService) {
-        this.notificationService = notificationService;
+        super(notificationService);
     }
 
     @Override

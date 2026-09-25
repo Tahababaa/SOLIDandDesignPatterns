@@ -1,10 +1,9 @@
 package com.taha.decorator;
 
-public class LoggingNotificationService implements NotificationService {
+public class LoggingNotificationService extends NotificationDecorator {
 
-    private final NotificationService notificationService;
     public LoggingNotificationService(NotificationService notificationService){
-        this.notificationService=notificationService;
+        super(notificationService);
     }
     @Override
     public void send(String recipient, String message) {

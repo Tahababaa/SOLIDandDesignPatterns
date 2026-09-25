@@ -1,11 +1,10 @@
 package com.taha.decorator;
 
-public class MetricsNotificationDecorator implements NotificationService{
+public class MetricsNotificationDecorator extends NotificationDecorator{
 
-    private  final NotificationService notificationService;
 
-    public MetricsNotificationDecorator(NotificationService notificationService) {
-        this.notificationService = notificationService;
+    protected MetricsNotificationDecorator(NotificationService notificationService) {
+        super(notificationService);
     }
 
     @Override
