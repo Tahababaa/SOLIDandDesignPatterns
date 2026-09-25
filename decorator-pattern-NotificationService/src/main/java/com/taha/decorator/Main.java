@@ -12,18 +12,21 @@ public class Main {
 //        service.send("Logger","Testing Logs boss!");
 
 
-        NotificationService service1 = new BasicNotificationService();
-        service1=new PriorityNotificationDecorator(new LoggingNotificationService(service1));
+//        NotificationService service1 = new BasicNotificationService();
+//        service1=new PriorityNotificationDecorator(new LoggingNotificationDecorator(service1));
+//
+//        service1.send("Boss","The Police is here!");
+//
+//        service1 = new MetricsNotificationDecorator(service1);
+//        service1.send("Godfather","We are in trouble!");
+//
+//
+//        NotificationService order = new BasicNotificationService();
+//        order = new MetricsNotificationDecorator(new PriorityNotificationDecorator(order));
+//
+//        order.send("CustomerABC","Delivery partner is waiting outside your Gate!");
 
-        service1.send("Boss","The Police is here!");
-
-        service1 = new MetricsNotificationDecorator(service1);
-        service1.send("Godfather","We are in trouble!");
-
-
-        NotificationService order = new BasicNotificationService();
-        order = new MetricsNotificationDecorator(new PriorityNotificationDecorator(order));
-
-        order.send("CustomerABC","Delivery partner is waiting outside your Gate!");
+        NotificationService service = NotificationServiceFactory.createDefaultService();
+        service.send("Boss","It's over!");
     }
 }

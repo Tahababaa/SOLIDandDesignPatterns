@@ -1,8 +1,8 @@
 package com.taha.decorator;
 
-public class LoggingNotificationService extends NotificationDecorator {
+public class LoggingNotificationDecorator extends NotificationDecorator {
 
-    public LoggingNotificationService(NotificationService notificationService){
+    public LoggingNotificationDecorator(NotificationService notificationService){
         super(notificationService);
     }
     @Override
