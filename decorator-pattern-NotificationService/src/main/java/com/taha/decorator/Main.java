@@ -28,5 +28,25 @@ public class Main {
 
         NotificationService service = NotificationServiceFactory.createDefaultService();
         service.send("Boss","It's over!");
+
+
+        NotificationService simple =
+                NotificationServiceFactory.createSimpleService();
+
+        simple.send("Alice", "Your order has been shipped.");
+
+        System.out.println("--------------------");
+
+        NotificationService priority =
+                NotificationServiceFactory.createPriorityService();
+
+        priority.send("Bob", "Server is down.");
+
+        System.out.println("--------------------");
+
+        NotificationService defaultService =
+                NotificationServiceFactory.createDefaultService();
+
+        defaultService.send("Charlie", "Daily report is ready.");
     }
 }
