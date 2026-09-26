@@ -22,4 +22,13 @@ public class TreeInstance {
     public Tree getTree() {
         return tree;
     }
+
+    public void display(){
+        System.out.println(
+                "Tree: "+tree.getType()
+                + ", Color: "+tree.getColor()
+                + ", Texture: "+tree.getTexture()
+                + ", Position: "+x+", "+y
+        );
+    }
 }

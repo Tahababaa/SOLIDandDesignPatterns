@@ -5,13 +5,18 @@ import java.util.Map;
 
 public class TreeFactory {
 
-    private Map<String,Tree> trees = new HashMap<>();
+    private Map<TreeKey,Tree> trees = new HashMap<>();
     public Tree getTree(String type,String color,String texture){
-        if(!trees.containsKey(type)){
-            trees.put(type,new Tree(type,color,texture));
+        TreeKey key = new TreeKey(type, color, texture);
+
+        if(!trees.containsKey(key)){
+            trees.put(key,new Tree(type,color,texture));
 
         }
-        return trees.get(type);
+        return trees.get(key);
     }
-
+    public int getTreeCount()
+    {
+        return trees.size();
+    }
 }
