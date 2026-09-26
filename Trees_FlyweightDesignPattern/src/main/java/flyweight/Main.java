@@ -1,14 +1,37 @@
 package flyweight;
 
 public class Main {
+
     public static void main(String[] args) {
-        TreeFactory treeFactory = new TreeFactory();
-        Tree t1 = treeFactory.getTree("Oak","Green","oak.png");
-        Tree t2 = treeFactory.getTree("Oak","Green","oak.png");
 
-        Tree t3 = treeFactory.getTree("Pine","Dark Green","pine.png");
+        TreeFactory factory = new TreeFactory();
 
-        System.out.println(t1==t2);
-        System.out.println(t2==t3);
+        TreeInstance tree1 =
+                new TreeInstance(
+                        factory.getTree("Oak", "Green", "oak.png"),
+                        10,
+                        20
+                );
+
+        TreeInstance tree2 =
+                new TreeInstance(
+                        factory.getTree("Oak", "Green", "oak.png"),
+                        50,
+                        80
+                );
+
+        TreeInstance tree3 =
+                new TreeInstance(
+                        factory.getTree("Oak", "Green", "oak.png"),
+                        100,
+                        40
+                );
+
+        System.out.println(tree1.getTree() == tree2.getTree());
+        System.out.println(tree2.getTree() == tree3.getTree());
+
+        System.out.println(tree1.getX() + ", " + tree1.getY());
+        System.out.println(tree2.getX() + ", " + tree2.getY());
+        System.out.println(tree3.getX() + ", " + tree3.getY());
     }
 }
