@@ -1,5 +1,6 @@
 public enum FileType {
     CSV,
     JSON,
-    XML
+    XML,
+    YAML
 }

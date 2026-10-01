@@ -1,6 +1,6 @@
 public class FileProcessingStrategyFactory {
 
-    public FileProcessingStrategy selectStrategy(FileType type){
+    public FileProcessingStrategy createStrategy(FileType type){
         switch(type)
         {
             case CSV:
@@ -9,6 +9,8 @@ public class FileProcessingStrategyFactory {
                 return new XmlProcessingStrategy();
             case JSON:
                 return new JsonProcessingStrategy();
+            case YAML:
+                return new YamlProcessingStrategy();
             default:
                 throw new IllegalArgumentException("CHECK TYPE");
         }

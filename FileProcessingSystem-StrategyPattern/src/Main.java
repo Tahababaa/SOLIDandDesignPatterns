@@ -16,12 +16,14 @@ public class Main {
 //        xmlFp.processFile("/Docker/");
 
         FileProcessingStrategyFactory factory = new FileProcessingStrategyFactory();
-        FileProcessor fileProcessor= new FileProcessor(factory.selectStrategy(FileType.CSV));
+        FileProcessor fileProcessor= new FileProcessor(factory.createStrategy(FileType.CSV));
         fileProcessor.processFile("H,C,V,T");
-        FileProcessor fileProcessorXml= new FileProcessor(factory.selectStrategy(FileType.XML));
+        FileProcessor fileProcessorXml= new FileProcessor(factory.createStrategy(FileType.XML));
         fileProcessorXml.processFile("/FLEX/");
-        FileProcessor fileProcessorJson= new FileProcessor(factory.selectStrategy(FileType.JSON));
+        FileProcessor fileProcessorJson= new FileProcessor(factory.createStrategy(FileType.JSON));
         fileProcessorJson.processFile("Name:Boss \n Task: Conquer");
+        FileProcessor fileProcessorYaml= new FileProcessor(factory.createStrategy(FileType.YAML));
+        fileProcessorYaml.processFile("Name:Duck \n Task: Swim");
 
 
 
