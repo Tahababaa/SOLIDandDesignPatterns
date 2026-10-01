@@ -1,5 +1,5 @@
 public class FileProcessor {
-    private FileProcessingStrategy fileProcessingStrategy;
+    private final FileProcessingStrategy fileProcessingStrategy;
 
     public FileProcessor(FileProcessingStrategy fileProcessingStrategy){
         this.fileProcessingStrategy=fileProcessingStrategy;
