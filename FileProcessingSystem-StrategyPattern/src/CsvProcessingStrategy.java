@@ -1,6 +1,5 @@
 public class CsvProcessingStrategy implements FileProcessingStrategy{
     @Override
-    public void process(String data) {
-        System.out.println("Processing CSV data: "+data);
-    }
-}
+    public ProcessingResult process(String data) {
+        return new ProcessingResult(true, "JSON data processed successfully!");
+    }}

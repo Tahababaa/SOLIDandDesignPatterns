@@ -1,6 +1,6 @@
 public class XmlProcessingStrategy implements FileProcessingStrategy{
     @Override
-    public void process(String data) {
-        System.out.println("XML processed! "+data);
+    public ProcessingResult process(String data) {
+        return new ProcessingResult(true, "XML data processed successfully!");
     }
 }

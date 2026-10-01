@@ -5,7 +5,7 @@ public class FileProcessor {
         this.fileProcessingStrategy=fileProcessingStrategy;
     }
 
-    public void processFile(String data){
-        fileProcessingStrategy.process(data);
+    public ProcessingResult processFile(String data){
+        return fileProcessingStrategy.process(data);
     }
 }

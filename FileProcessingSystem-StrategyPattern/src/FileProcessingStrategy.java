@@ -1,3 +1,3 @@
 public interface FileProcessingStrategy {
-    void process(String data);
+    ProcessingResult process(String data);
 }

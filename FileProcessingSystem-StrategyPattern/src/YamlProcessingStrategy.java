@@ -1,7 +1,7 @@
 public class YamlProcessingStrategy implements FileProcessingStrategy{
 
     @Override
-    public void process(String data) {
-        System.out.println("Processing YAML data: "+data);
+    public ProcessingResult process(String data) {
+        return new ProcessingResult(true, "YAML data processed successfully!");
     }
 }
